@@ -133,4 +133,4 @@ Test Events to test the function:
 ```
 
 Execution Logs:
-![execution log](imgs/img1.png)
+![execution log](imgs/img1.jpg)
