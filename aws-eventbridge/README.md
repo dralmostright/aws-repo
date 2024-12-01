@@ -12,14 +12,14 @@ Key Concepts of AWS events:
 
 4. Event Attributes: Events contain specific details about the action or state change that triggered the event which include source (e.g. aws.ec2, aws.s3 ..), Detail-type (description of event), time resources and other details.
 
-### EventBridge Rules:
+## EventBridge Rules:
 AWS EventBridge enables users to define event rules to filter specific types of events and route them to desired targets (such as Lambda functions, SNS topics, or SQS queues). This allows automated actions to be taken in response to particular events. For example:
 
 Trigger a Lambda function when an EC2 instance starts.
 Send an SNS notification when a new object is uploaded to an S3 bucket.  
 
 
-Event eg.
+## Event eg.
 ```
 ##
 ## Event for standalone rds snapshot
@@ -34,7 +34,7 @@ Event eg.
 }
 ```
 
-Event for cluster rds snapshot creation
+## Event for cluster rds snapshot creation
 ```
 ##
 ## Event for cluster rds snapshot
@@ -49,7 +49,7 @@ Event for cluster rds snapshot creation
 }
 ```
 
-A basic lambda function:
+## A basic lambda function:
 ```
 import json
 import boto3
@@ -83,7 +83,7 @@ def lambda_handler(event, context):
 
 The logger is for our troubleshooting and can be omited when doing deployment in production.
 
-Test Events to test the function:
+## Test Events to test the function:
 ```
 ##
 ## RDS Standalone
@@ -132,7 +132,7 @@ Test Events to test the function:
 }
 ```
 
-Execution Logs:
+## Execution Logs:
 ![execution log](imgs/img1.jpg)
 
 ## References
