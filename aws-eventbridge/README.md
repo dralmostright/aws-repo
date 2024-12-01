@@ -48,3 +48,24 @@ Event for cluster rds snapshot creation
   }
 }
 ```
+
+A basic lambda function:
+```
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+def lambda_handler(event, context):
+    logger.info(event)
+    srcrdsclient = boto3.client('rds')
+    snapshot_id = event['detail']['SourceIdentifier'] 
+    sourcearn = event['detail']['SourceArn']
+    return {
+        'statusCode': 200,
+        'body': f"Successfully copied tags to snapshot {snapshot_id}, ARN {sourcearn} "
+    }
+
+```
+
+The logger is for our troubleshooting and can be omited when doing deployment in production.
