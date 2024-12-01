@@ -82,3 +82,52 @@ def lambda_handler(event, context):
 ```
 
 The logger is for our troubleshooting and can be omited when doing deployment in production.
+
+Test Events to test the function:
+```
+##
+## RDS Standalone
+##
+{
+  "version": "0",
+  "id": "844e2571-85d4-695f-b930-0153b71dcb42",
+  "detail-type": "RDS DB Snapshot Event",
+  "source": "aws.rds",
+  "account": "123456789012",
+  "time": "2018-10-06T12:26:13Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:rds:us-east-1:123456789012:snapshot:rds:snapshot-replica-2018-10-06-12-24"],
+  "detail": {
+    "EventCategories": ["creation"],
+    "SourceType": "SNAPSHOT",
+    "SourceArn": "arn:aws:rds:us-east-1:123456789012:snapshot:rds:snapshot-replica-2018-10-06-12-24",
+    "Date": "2018-10-06T12:26:13.882Z",
+    "SourceIdentifier": "snapshot-replica-2018-10-06-12-24",
+    "Message": "Automated snapshot created",
+    "EventID": "RDS-EVENT-0091"
+  }
+}
+
+##
+## RDS Cluster
+##
+{
+  "version": "0",
+  "id": "844e2571-85d4-695f-b930-0153b71dcb42",
+  "detail-type": "RDS DB Cluster Snapshot Event",
+  "source": "aws.rds",
+  "account": "123456789012",
+  "time": "2018-10-06T12:26:13Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:rds:us-east-1:123456789012:snapshot:rds:snapshot-replica-2018-10-06-12-24"],
+  "detail": {
+    "EventCategories": ["backup"],
+    "SourceType": "CLUSTER_SNAPSHOT",
+    "SourceArn": "arn:aws:rds:us-east-1:123456789012:snapshot:rds:snapshot-replica-2018-10-06-12-24",
+    "Date": "2018-10-06T12:26:13.882Z",
+    "SourceIdentifier": "mysql-instance-2018-10-06-12-24",
+    "Message": "Creating manual cluster snapshot",
+    "EventID": "RDS-EVENT-0074"
+  }
+}
+```
