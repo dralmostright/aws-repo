@@ -51,6 +51,9 @@ Event for cluster rds snapshot creation
 
 A basic lambda function:
 ```
+import json
+import boto3
+
 import logging
 
 logger = logging.getLogger()
@@ -59,13 +62,23 @@ logger.setLevel(logging.INFO)
 def lambda_handler(event, context):
     logger.info(event)
     srcrdsclient = boto3.client('rds')
+    instType=event['detail']['SourceType']
     snapshot_id = event['detail']['SourceIdentifier'] 
     sourcearn = event['detail']['SourceArn']
+    if instType == 'SNAPSHOT':
+        print('Snapshot is from RDS standalone instance')
+        message = f"SnapshotID : {snapshot_id}, ARN: {sourcearn}"
+    elif (instType == 'CLUSTER_SNAPSHOT'):
+        print('Snapshot is from RDS cluster instance')
+        message = f"SnapshotID : {snapshot_id}, ARN: {sourcearn}"
+    else:
+        print('Unidentified Source')
+        message = f"SnapshotID : NULL, ARN: NULL"
+
     return {
         'statusCode': 200,
-        'body': f"Successfully copied tags to snapshot {snapshot_id}, ARN {sourcearn} "
+        'body': message
     }
-
 ```
 
 The logger is for our troubleshooting and can be omited when doing deployment in production.
