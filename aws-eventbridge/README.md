@@ -134,3 +134,9 @@ Test Events to test the function:
 
 Execution Logs:
 ![execution log](imgs/img1.jpg)
+
+## References
+* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html#USER_Events.Messages.cluster-snapshot
+* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html
+* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-cloud-watch-events.html
+* https://docs.aws.amazon.com/lambda/latest/dg/python-logging.html
