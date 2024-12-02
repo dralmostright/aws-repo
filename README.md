@@ -2,8 +2,7 @@
 
 
 # Suman Adhikari
-[![Linkedin Badge](https://img.shields.io/badge/-PrinceKumar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/dralmostright/)](https://www.linkedin.com/in/dralmostright/)
-[![Linkedin Badge](https://img.shields.io/badge/:badgeContent?style=flat-square&logo=Linkedin&logoSize=auto&label=Suman%20Adhikari&labelColor=https%3A%2F%2Fgithub.com%2Fdralmostright%2Faws-repo&cacheSeconds=5)](https://www.linkedin.com/in/dralmostright/)
+[![Linkedin Badge](https://img.shields.io/badge/Suman%20Adhikari-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dralmostright/)
 
 
 
