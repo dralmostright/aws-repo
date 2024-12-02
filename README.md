@@ -19,3 +19,9 @@
       src="https://github-readme-stats.vercel.app/api/top-langs/?username=dralmostright&layout=compact&theme=radical" />
   </a>  
 </p>
+
+# Technologies
+<kbd><img height="50" src="https://raw.githubusercontent.com/github/explore/refs/heads/main/topics/python/python.png"></kbd>
+<kbd><img height="50" src="https://raw.githubusercontent.com/github/explore/refs/heads/main/topics/bash/bash.png"></kbd>
+<kbd><img height="50" src="https://raw.githubusercontent.com/github/explore/refs/heads/main/topics/aws/aws.png"></kbd>
+
